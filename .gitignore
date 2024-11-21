@@ -1,0 +1,8 @@
+# node
+node_modules
+
+# api key
+aistudio-key.txt
+
+# typescript output
+dist

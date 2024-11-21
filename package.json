@@ -1,0 +1,42 @@
+{
+    "name": "instabytes-back",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "license": "AGPL-version-3.0",
+    "private": false,
+    "engines": {
+        "node": ">= 14.0.0",
+        "npm": ">= 6.0.0"
+    },
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": "",
+    "keywords": [],
+    "author": {
+        "name": "vinnom",
+        "email": "vinnom.2d@gmail.com"
+    },
+    "contributors": [],
+    "scripts": {
+        "dev": "nodemon --watch src --exec \"npm run build && node dist/server.js\"",
+        "build": "tsc",
+        "format": "prettier --write .",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "express": "^4.21.1"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.9.1",
+        "husky": "^9.1.7",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.3"
+    }
+}
