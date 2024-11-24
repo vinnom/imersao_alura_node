@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
-      "target": "ES2022",
-      "module": "Node16",
-      "moduleResolution": "node16",
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "strict": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
+        "target": "ES2022",
+        "module": "Node16",
+        "moduleResolution": "node16",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true
     },
     "include": ["src/**/*.ts"]
-  }
+}
