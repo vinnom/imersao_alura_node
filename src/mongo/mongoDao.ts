@@ -1,15 +1,15 @@
 import { MongoClient, WithId } from "mongodb";
 
 class MongoDao {
-    client: MongoClient
+    client: MongoClient;
 
     constructor(client: MongoClient) {
-        this.client = client
+        this.client = client;
     }
 
     public async getAllPosts() {
-        return await this.client.db("imersaoBackendNode").collection("posts").find().toArray()
+        return await this.client.db("imersaoBackendNode").collection("posts").find().toArray();
     }
 }
 
-export { MongoDao }
+export { MongoDao };

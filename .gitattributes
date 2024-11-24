@@ -1,0 +1,2 @@
+# ignore changes to package-lock.json when diffing
+package-lock.json -diff
