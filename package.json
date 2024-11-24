@@ -23,13 +23,14 @@
     },
     "contributors": [],
     "scripts": {
-        "dev": "npm run build && node --watch dist/server.js",
+        "dev": "npm run build && node --watch --env-file=.env dist/server.js",
         "build": "tsc",
         "format": "prettier --write .",
         "prepare": "husky"
     },
     "dependencies": {
-        "express": "^4.21.1"
+        "express": "^4.21.1",
+        "mongodb": "^6.11.0"
     },
     "devDependencies": {
         "@types/express": "^5.0.0",

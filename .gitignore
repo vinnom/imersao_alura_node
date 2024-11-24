@@ -3,6 +3,7 @@ node_modules
 
 # api key
 aistudio-key.txt
+.env
 
 # typescript output
 dist
