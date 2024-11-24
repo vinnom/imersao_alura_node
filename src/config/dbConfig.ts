@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import instaLog from "../utils/logUtils.js";
+import { instaLog } from "../utils/logUtils.js";
 
 export default async function dbConnection(connKey: string): Promise<MongoClient> {
     let client;

@@ -8,7 +8,11 @@ class MongoDao {
     }
 
     public async getAllPosts() {
-        return await this.client.db("imersaoBackendNode").collection("posts").find().toArray();
+        return this.client.db("imersaoBackendNode").collection("posts").find().toArray();
+    }
+
+    public async insertPost(post: Object) {
+        return this.client.db("imersaoBackendNode").collection("posts").insertOne(post);
     }
 }
 
