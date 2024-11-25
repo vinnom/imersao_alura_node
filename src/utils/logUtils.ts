@@ -4,13 +4,16 @@ const instaLog = (message: string, debug: boolean = false) => {
     }
 };
 
-const instaError = (message: string, res: any, error: any) => {
+const instaError = (message: string, res: any = undefined, error: any) => {
+    if (res !== undefined) {
+        res.status(500).json({ Error: message });
+    }
+
     if (error instanceof Error) {
         console.error(error.message);
     } else {
         console.error(String(error));
     }
-    res.status(500).json({ Error: message });
 };
 
 export { instaLog, instaError };

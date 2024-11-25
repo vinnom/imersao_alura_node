@@ -1,4 +1,4 @@
-import { MongoClient, WithId } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 class MongoDao {
     client: MongoClient;
@@ -13,6 +13,14 @@ class MongoDao {
 
     public async insertPost(post: Object) {
         return this.client.db("imersaoBackendNode").collection("posts").insertOne(post);
+    }
+
+    public async updatePost(id: string, post: Object) {
+        const objId = ObjectId.createFromHexString(id);
+        return this.client
+            .db("imersaoBackendNode")
+            .collection("posts")
+            .updateOne({ _id: new ObjectId(objId) }, { $set: post });
     }
 }
 

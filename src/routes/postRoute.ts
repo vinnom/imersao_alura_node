@@ -1,6 +1,6 @@
 import { Express } from "express";
 import { json } from "express";
-import { listAllPosts, sendPost, uploadImage } from "../controllers/postsController.js";
+import { listAllPosts, sendPost, updatePost, uploadImage } from "../controllers/postsController.js";
 import { MongoDao } from "../mongo/mongoDao.js";
 import upload from "../config/multerConfig.js";
 
@@ -17,6 +17,10 @@ const routes = (server: Express, dao: MongoDao) => {
 
     server.post("/upload", upload().single("image"), async (req, res) => {
         uploadImage(req, res, dao);
+    });
+
+    server.put("/upload/:id", async (req, res) => {
+        updatePost(req, res, dao);
     });
 };
 
